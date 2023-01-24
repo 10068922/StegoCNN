@@ -77,9 +77,9 @@ class CNNModel(object):
 
         #Transfer learning model (TL-Model)
         #base_model = DenseNet121(
-        #base_model = MobileNetV2(
+        base_model = MobileNetV2(
         #base_model = NASNetMobile(
-        base_model = ResNet50V2(
+        #base_model = ResNet50V2(
         input_shape=self.input_shape,
         include_top=False)  # Do not include the ImageNet classifier at the top.
         base_model.trainable = False

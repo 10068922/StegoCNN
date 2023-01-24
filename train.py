@@ -80,11 +80,9 @@ model_training_log = base_path + '/training_log/'
 model_train_time = train_path + '/model_train_time.txt'
 
 # Model training parameters
-num_of_epoch = 2
+num_of_epoch = 100
 num_of_train_samples = 56000
 num_of_validation_samples = 24000
-num_of_train_samples = 400
-num_of_validation_samples = 80
 
 # Batch size
 train_batch_size = 32

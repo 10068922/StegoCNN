@@ -1,6 +1,6 @@
-##########################################################################
-###########  This class is for plotting activation functions  ############
-##########################################################################
+############################################################################
+##               Class for plotting activation functions                  ##
+############################################################################
 
 # import libraries
 import numpy as np
@@ -36,7 +36,7 @@ def softmax(x):
 
 
 def main():
-    ##sigmoid
+    ##Sigmoid
     x = np.linspace(-10, 10)
     plt.plot(x, sigmoid(x))
     plt.axis('tight')

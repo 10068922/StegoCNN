@@ -1,5 +1,5 @@
 ############################################################################
-##                      Image Dataset Management Class                    ##
+##                   Class for managing image dataset                     ##
 ############################################################################
 
 from keras.preprocessing.image import ImageDataGenerator

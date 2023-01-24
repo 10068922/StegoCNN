@@ -43,7 +43,7 @@ test_data_dir = 'D:/CNN/dataset/test'
 # paths to save outputs
 train_log_data_file = train_path + '/model_train.csv'
 plt_cm = train_path + '/model_cm.png'
-plt_normalised_cm = train_path + '/model_norm_cm.png'
+plt_normalized_cm = train_path + '/model_norm_cm.png'
 plt_roc = train_path + '/model_roc.png'
 plt_accuracy = train_path + '/model_accuracy.png'
 plt_loss = train_path + '/model_loss.png'
@@ -110,7 +110,7 @@ def main():
     # plot confusion matrix
     cm = confusion_matrix(y_true, y_pred)
     plotData.plot_confusion_matrix(cm, cm_plot_labels, plt_cm, title='Confusion Matrix')
-    plotData.plot_confusion_matrix(cm, cm_plot_labels, plt_normalised_cm, normalize=True, title='Normalised Confusion Matrix')
+    plotData.plot_confusion_matrix(cm, cm_plot_labels, plt_normalized_cm, normalize=True, title='normalized Confusion Matrix')
     # Compute ROC curve and ROC area for each class
     roc_auc = plotData.plot_roc(y_true, y_pred, plt_roc)
     mae = mean_absolute_error(y_true, y_pred)
@@ -142,7 +142,7 @@ def main():
         f.write('- Confusion Matrix:\n')
         f.write(str(cm))
         f.write('\n\n')
-        f.write('normalised Confusion Matrix:\n')
+        f.write('Normalized Confusion Matrix:\n')
         cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
         f.write(str(cm))
         f.write('\n\n')
